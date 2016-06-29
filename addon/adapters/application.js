@@ -12,11 +12,13 @@ export default DS.RESTAdapter.extend({
       'X-Parse-Application-Id' : Ember.get( this, 'applicationId' ),
       'X-Parse-REST-API-Key'   : Ember.get( this, 'restApiId' )
     });
+
+    this.set( 'host', Ember.get( this, 'parseHost' ));
   },
 
-  host: 'https://api.parse.com',
+  //host: 'https://api.parse.com',
 
-  namespace: '1',
+  //namespace: '1',
 
   classesPath: 'classes',
 
